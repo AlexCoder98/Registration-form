@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', arial, sans-serif;
+
+}
+
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2019/09/12/06/30/tribute-in-light-4470711_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#pop-up .pop-up-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 40vh;
+    padding: 1%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .95);
+}
+
+
+#pop-up .welcome-pop-up,
+#pop-up .main-pop-up.active,
+#pop-up .final-pop-up.active {
+    display: flex;
+}
+
+#pop-up .welcome-pop-up.disable {
+    display: none;
+}
+
+#pop-up .main-pop-up,
+#pop-up .final-pop-up {
+    display: none;
+}
+
+#pop-up .welcome-pop-up h1 {
+    font-size: 44px;
+    text-align: center;
+    font-weight: 800;
+}
+
+#pop-up button {
+    font-size: 20px;
+    background-color: rgb(9, 75, 152);
+    border: none;
+    font-weight: 500;
+}
+
+#pop-up button:hover {
+    background-color: rgb(8, 53, 105);
+}
+
+#pop-up h3 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#pop-up .main-pop-up .input-wrapper {
+    width: 80%;
+}
+
+#pop-up .main-pop-up .input-wrapper input {
+    margin: 2% auto;
+    transition-duration: .3s;
+}
+
+#pop-up .main-pop-up .input-wrapper input:focus {
+    box-shadow: none;
+    border-width: 1.5px;
+    border-color: rgb(65, 106, 239);
+}
+
+#pop-up .main-pop-up .input-wrapper input[type="checkbox"] {
+    cursor: pointer;
+}
+
+#pop-up .main-pop-up .input-wrapper label {
+    margin-top: 2%;
+    font-size: 10px;
+    font-style: italic;
+}
+
+#pop-up .final-pop-up .text-container p {
+    text-align: center;
+}
+
+#pop-up .final-pop-up .text-container p span {
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+
+    #pop-up .pop-up-body {
+        width: 50%;
+    }
+
+    #pop-up .welcome-pop-up h1 {
+        font-size: 38px;
+    }
+
+    #pop-up h3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #pop-up .pop-up-body {
+        width: 80%;
+        padding: 2%;
+    }
+
+    #pop-up .welcome-pop-up h1 {
+        font-size: 36px;
+    }
+
+    #pop-up h3 {
+        font-size: 30px;
+    }
+
+    #pop-up .main-pop-up .input-wrapper {
+        width: 90%;
+    }
+
+}
